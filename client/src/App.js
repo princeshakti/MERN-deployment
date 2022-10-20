@@ -15,7 +15,7 @@ const App = () => {
     dispatch(getPosts());
   }, [currentId, dispatch]);
 
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(true);
 
   const toggle = () => {
     setShow(!show);
@@ -33,7 +33,7 @@ const App = () => {
         type="submit"
         onClick={toggle}
       >
-        Show Form
+        Hide Form
       </Button>
       <p></p>
       <Container>

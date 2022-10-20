@@ -3,13 +3,7 @@ import { TextField, Button, Paper } from "@material-ui/core";
 
 import useStyles from "./styles";
 
-const StepOne = ({
-  postData,
-  setPostData,
-  prevStep,
-  currentId,
-  handleSubmit,
-}) => {
+const StepOne = ({ postData, setPostData, prevStep, clear, handleSubmit }) => {
   const classes = useStyles();
 
   const submitFormData = (e) => {
@@ -70,6 +64,16 @@ const StepOne = ({
             onClick={prevStep}
           >
             Previous
+          </Button>
+          <Button
+            className={classes.buttonSubmit}
+            variant="contained"
+            color="secondary"
+            size="small"
+            type="submit"
+            onClick={clear}
+          >
+            Clear
           </Button>
           <Button
             className={classes.buttonSubmit}

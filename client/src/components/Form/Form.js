@@ -72,6 +72,7 @@ const Form = ({ currentId, setCurrentId }) => {
                   nextStep={nextStep}
                   postData={postData}
                   setPostData={setPostData}
+                  clear={clear}
                 />
               </div>
             </div>
@@ -89,6 +90,7 @@ const Form = ({ currentId, setCurrentId }) => {
                   postData={postData}
                   setPostData={setPostData}
                   prevStep={prevStep}
+                  clear={clear}
                 />
               </div>
             </div>
@@ -106,6 +108,7 @@ const Form = ({ currentId, setCurrentId }) => {
                   setPostData={setPostData}
                   prevStep={prevStep}
                   handleSubmit={handleSubmit}
+                  clear={clear}
                 />
               </div>
             </div>

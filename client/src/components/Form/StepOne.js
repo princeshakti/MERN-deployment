@@ -2,7 +2,7 @@ import React from "react";
 import { TextField, Button, Paper } from "@material-ui/core";
 import useStyles from "./styles";
 
-const StepOne = ({ nextStep, postData, setPostData }) => {
+const StepOne = ({ nextStep, postData, setPostData, clear }) => {
   const classes = useStyles();
 
   const submitFormData = async (e) => {
@@ -20,9 +20,6 @@ const StepOne = ({ nextStep, postData, setPostData }) => {
           noValidate
           className={`${classes.root} ${classes.form}`}
         >
-          {/* <Typography variant="h6">
-            {currentId ? `Editing "${post.name}"` : "Create a Profile"}
-          </Typography> */}
           <TextField
             name="name"
             variant="outlined"
@@ -58,16 +55,28 @@ const StepOne = ({ nextStep, postData, setPostData }) => {
             onChange={(e) => setPostData({ ...postData, team: e.target.value })}
           />
         </form>
-        <Button
-          className={classes.buttonSubmit}
-          variant="contained"
-          color="primary"
-          size="small"
-          type="submit"
-          onClick={submitFormData}
-        >
-          Continue
-        </Button>
+        <div style={{ display: "flex", justifyContent: "space-around" }}>
+          <Button
+            className={classes.buttonSubmit}
+            variant="contained"
+            color="primary"
+            size="small"
+            type="submit"
+            onClick={submitFormData}
+          >
+            Continue
+          </Button>
+          <Button
+            className={classes.buttonSubmit}
+            variant="contained"
+            color="secondary"
+            size="small"
+            type="submit"
+            onClick={clear}
+          >
+            Clear
+          </Button>
+        </div>
       </Paper>
     </div>
   );
